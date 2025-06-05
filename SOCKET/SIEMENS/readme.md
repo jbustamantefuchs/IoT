@@ -132,6 +132,7 @@ Step-by-step guide to implementing **SOCKET** communication on **Siemens** devic
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/12.png" alt="Siemens Socket Image 0">
 </p>
+
 ### k) To receive data from an external source, add the receiving variable (previously created in your DB) to the Watch and Force Table.
 
 <p align="center">
@@ -140,6 +141,7 @@ Step-by-step guide to implementing **SOCKET** communication on **Siemens** devic
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/14.png" alt="Siemens Socket Image 0">
 </p>
+
 ### l) The table should match the shown format. Use the same IP and port as configured earlier. For example, if the word HELLO is sent, it will appear in the received data as shown.
 
 <p align="center">
