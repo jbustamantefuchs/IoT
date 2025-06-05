@@ -86,7 +86,7 @@ Step-by-step guide to implementing **SOCKET** communication on **Siemens** devic
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.png" alt="Siemens Socket Image 0">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.l.png" alt="Siemens Socket Image 0">
+  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.1.png" alt="Siemens Socket Image 0">
 </p>
 
 ### e) Return to DB\_TCP\_IP and update the connection variable using your own IP address and port number.
@@ -106,39 +106,42 @@ Step-by-step guide to implementing **SOCKET** communication on **Siemens** devic
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/8.png" alt="Siemens Socket Image 0">
 </p>
-
-### h) Enable the system clock and memory; this configuration ensures that data is sent every 1 Hz.
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/9.png" alt="Siemens Socket Image 0">
 </p>
+
+### h) Enable the system clock and memory; this configuration ensures that data is sent every 1 Hz.
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/10.png" alt="Siemens Socket Image 0">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/10.1.png" alt="Siemens Socket Image 0">
 </p>
 
 ### i) Set the enable variable to have a monitored value of 1 or True.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/10.1.png" alt="Siemens Socket Image 0">
+  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/10.2.png" alt="Siemens Socket Image 0">
 </p>
 
 ### j) You will observe that the send value changes to 1 or True every second, initiating data transmission.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/10.2.png" alt="Siemens Socket Image 0">
-</p>
-<p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/11.png" alt="Siemens Socket Image 0">
 </p>
+<p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/12.png" alt="Siemens Socket Image 0">
-
+</p>
 ### k) To receive data from an external source, add the receiving variable (previously created in your DB) to the Watch and Force Table.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/13.png" alt="Siemens Socket Image 0">
 </p>
+<p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/14.png" alt="Siemens Socket Image 0">
-
+</p>
 ### l) The table should match the shown format. Use the same IP and port as configured earlier. For example, if the word HELLO is sent, it will appear in the received data as shown.
 
 <p align="center">
