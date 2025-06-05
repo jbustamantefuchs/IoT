@@ -7,7 +7,7 @@ Start by connecting your groov EPIC device to your local network.
 You can use either Wi-Fi or Ethernet, depending on your setup.
 
 <div align="center">
-  <img src="pics/add_devicenet.png" width="500">
+  <img src="IMAGES/0.jpg" width="720" height="1279">
 </div>
 
 ### Step 2: Find the IP Address
