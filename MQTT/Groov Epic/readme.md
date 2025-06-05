@@ -7,7 +7,7 @@ Start by connecting your groov EPIC device to your local network.
 You can use either Wi-Fi or Ethernet, depending on your setup.
 
 <p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/0.png" alt="Siemens MQTT Image 0">
+  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/0.jpg" alt="Siemens MQTT Image 0">
 </p>
 
 ### Step 2: Find the IP Address
@@ -15,11 +15,11 @@ Once connected, identify the IP address of your groov EPIC.
 In this example, the IP address is: 192.168.20.49
 
 <p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/1.png" alt="Siemens MQTT Image 0">
+  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/1.jpg" alt="Siemens MQTT Image 0">
 </p>
 
 <p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/2.png" alt="Siemens MQTT Image 0">
+  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/2.jpg" alt="Siemens MQTT Image 0">
 </p>
 
 
