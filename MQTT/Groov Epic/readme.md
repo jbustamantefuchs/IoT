@@ -14,14 +14,13 @@ You can use either Wi-Fi or Ethernet, depending on your setup.
 Once connected, identify the IP address of your groov EPIC.
 In this example, the IP address is: 192.168.20.49
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/1.jpg" alt="Siemens MQTT Image 0" width="720" height="1279">
-</p>
+<div align="center">
+  <img src="IMAGES/1.jpg" width="720" height="1279">
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/2.jpg" alt="Siemens MQTT Image 0" width="720" height="1279">
-</p>
-
+<div align="center">
+  <img src="IMAGES/2.jpg" width="720" height="1279">
+</div>
 
 This address allows you to access the device from your computer.
 Open a web browser and enter the IP address:
@@ -29,9 +28,9 @@ http://192.168.20.49
 
 You will be directed to the login page of the groov EPIC interface.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/3.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/3.png" >
+</div>
 
 ### Step 3: Log In to the groov EPIC Interface
 Use the following credentials to log in:
@@ -49,17 +48,16 @@ Use the following credentials to log in:
   </table>
 </div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/4.png" alt="Siemens MQTT Image 0">
-</p>
-
+<div align="center">
+  <img src="IMAGES/4.png" >
+</div>
 
 ### Step 4: View the Main Menu
 After logging in, you will see the groov EPIC main system menu.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/5.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/5.png" >
+</div>
 
 ### Step 5: Open Node-RED
 From the main menu:
@@ -68,19 +66,19 @@ Select the Node-RED option.
 
 Click on "Open Node-RED Editor".
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/6.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/6.png" >
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/7.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/7.png" >
+</div>
 
 You are now inside the Node-RED editor, ready to build and configure MQTT flows on your groov EPIC.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/a.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/a.png" >
+</div>
 
 ## Part 2: Building the MQTT Flow
 
@@ -97,9 +95,9 @@ Enter the Value: hello!
 
 Click Done.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/8.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/8.png" >
+</div>
 
 ### Step 2: Add an MQTT Out Node
 Under the "output" section, find the MQTT out node.
@@ -128,22 +126,21 @@ Click Done.
 
 Connect the Inject node to the MQTT out node by dragging from the gray dot.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/9.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/9.png" >
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/10.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/10.png" >
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/11.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/11.png" >
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/12.png" alt="Siemens MQTT Image 0">
-</p>
-
+<div align="center">
+  <img src="IMAGES/12.png" >
+</div>
 
 ### Step 3: Add an MQTT In Node
 From the "input" section, drag an MQTT in node into the workspace.
@@ -158,13 +155,13 @@ Set QoS to: 2
 
 Click Done.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/13.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/13.png" >
+</div>
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/14.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/14.png" >
+</div>
 
 ### Step 4: Add a Debug Node
 Under the "output" section, find and drag a Debug node next to the MQTT in node.
@@ -175,18 +172,18 @@ Make sure the Output is set to: msg.payload
 
 Click Done.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/15.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/15.png" >
+</div>
 
 Connect the MQTT in node to the Debug node.
 
 ### Step 5: Deploy the Flow
 Click the red "Deploy" button in the upper-right corner to activate your flow.
 
-<p align="center">
-  <img src="https://github.com/jbustamantefuchs/IoT/blob/main/MQTT/Groov%20Epic/IMAGES/16.png" alt="Siemens MQTT Image 0">
-</p>
+<div align="center">
+  <img src="IMAGES/16.png" >
+</div>
 
 #### Flow Overview
 The Inject node manually sends a message (hello!)
