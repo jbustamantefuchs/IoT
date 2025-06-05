@@ -2,14 +2,13 @@
 
 Step-by-step guide to implementing **MQTT** communication on **Siemens** devices using **TIA Portal** and the `LMQTT_Client` library.
 
-
 ## Part 1: Create a Siemens account
 
-1. Go to: 👉 [https://support.industry.siemens.com](https://support.industry.siemens.com/)
-2. In the top-right corner, click **“Register”**.
-3. Fill in your details (name, email, country, etc.).
-4. Check your email to confirm the registration.
-5. Log in to the portal using your new account.
+1.  Go to: 👉 [https://support.industry.siemens.com](https://support.industry.siemens.com/)
+2.  In the top-right corner, click **“Register”**.
+3.  Fill in your details (name, email, country, etc.).
+4.  Check your email to confirm the registration.
+5.  Log in to the portal using your new account.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/0.png" alt="Siemens MQTT Image 0">
@@ -19,15 +18,14 @@ Step-by-step guide to implementing **MQTT** communication on **Siemens** devices
 
 ## Part 2: Download the communication library
 
-1. Visit the official Siemens support page for the communication libraries:
-    
-    https://support.industry.siemens.com/cs/document/109780503
-    
-2. Scroll down to the **“Download”** section.
-3. Select the appropriate version for your installed TIA Portal
-4. Click the **download icon**.
-5. Accept the license terms if prompted.
-6. Download and unzip the archive on your computer.
+1.  Visit the official Siemens support page for the communication libraries:
+
+    https://support.industry.siemens.com/cs/document/109780503
+2.  Scroll down to the **“Download”** section.
+3.  Select the appropriate version for your installed TIA Portal
+4.  Click the **download icon**.
+5.  Accept the license terms if prompted.
+6.  Download and unzip the archive on your computer.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/1.png" alt="Siemens MQTT Image 0">
@@ -40,12 +38,12 @@ Step-by-step guide to implementing **MQTT** communication on **Siemens** devices
 
 ## Part 3: Import the library into TIA Portal
 
-1. Open your project in **TIA Portal**.
-2. Go to the **“Project Library”** panel.
-3. Right-click and select: **Manage libraries** → **Open library**.
-4. Browse for the `.al#` file you downloaded. (# represents the version of Tia in use) 
-5. The library will open as a **Global Library**.
-6. From there, you can drag and drop function blocks, data types, and other components into your project.
+1.  Open your project in **TIA Portal**.
+2.  Go to the **“Project Library”** panel.
+3.  Right-click and select: **Manage libraries** → **Open library**.
+4.  Browse for the `.al#` file you downloaded. (# represents the version of Tia in use)
+5.  The library will open as a **Global Library**.
+6.  From there, you can drag and drop function blocks, data types, and other components into your project.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/3.png" alt="Siemens MQTT Image 0">
@@ -62,15 +60,15 @@ Step-by-step guide to implementing **MQTT** communication on **Siemens** devices
 
 ---
 
-## Part 4: Set-Up **LMQTT_Client FB**
+## Part 4: Set-Up **LMQTT\_Client FB**
 
-### a) Add the LMQTT_Client FB to a Network**
+### a) Add the LMQTT\_Client FB to a Network\*
 
-1. Open **TIA Portal** and navigate to the program block where you want to implement MQTT communication.
-2. In an empty network, insert a new **Function Block (FB)**.
-3. Search for and select: `LMQTT_Client`.
-4. When prompted, create an associated Data Block for the FB.
-5. Accept the default name: `LMQTT_Client_DB`.
+1.  Open **TIA Portal** and navigate to the program block where you want to implement MQTT communication.
+2.  In an empty network, insert a new **Function Block (FB)**.
+3.  Search for and select: `LMQTT_Client`.
+4.  When prompted, create an associated Data Block for the FB.
+5.  Accept the default name: `LMQTT_Client_DB`.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/7.png" alt="Siemens MQTT Image 0">
@@ -83,9 +81,9 @@ Step-by-step guide to implementing **MQTT** communication on **Siemens** devices
 
 ### b) Create a New Data Block for Parameters
 
-1. Go to **Program blocks** → right-click → **Add new block**.
-2. Choose **Data Block**.
-3. Name it as desired (e.g., Data_block_MQTT).
+1.  Go to **Program blocks** → right-click → **Add new block**.
+2.  Choose **Data Block**.
+3.  Name it as desired (e.g., Data\_block\_MQTT).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/9.png" alt="Siemens MQTT Image 0">
@@ -94,36 +92,121 @@ Step-by-step guide to implementing **MQTT** communication on **Siemens** devices
 ---
 
 ### c) Open the Data Block and add the following variables:
+
 FULL TAGS:
 
-| Alias	                | Type                     |
-|----------------------|--------------------------|
-| enable               | Bool                     |
-| publish              | Bool                     |
-| subscribe            | Bool                     |
-| unsubscribe          | Bool                     |
-| qos                  | USInt                    |
-| retain               | Bool                     |
-| publishMsgLen        | 100                      |
-| willMsgLen           | 100                      |
-| connParam            | "LMQTT_typeConnParam"    |
-| clientID             | WString                  |
-| username             | WString                  |
-| password             | WString                  |
-| willtopic            | WString                  |
-| willMsgPayload       | Array[0..99] of Byte     |
-| mqttTopic            | WString                  |
-| publishMsgPayload    | Array[0..99] of Byte     |
-| receivedTopic        | WString                  |
-| receivedMsgPayload   | Array[0..99] of Byte     |
-| valid                | Bool                     |
-| done                 | Bool                     |
-| busy                 | Bool                     |
-| error                | Bool                     |
-| status               | Word                     |
-| diagnostics          | "typeDiagnostics"        |
-| receivedMsgStatus    | USInt                    |
-| receivedMsgDataLen   | UDint                    |
+<div align="center">
+  <table>
+    <tr>
+      <th>Alias</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td>enable</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>publish</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>subscribe</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>unsubscribe</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>qos</td>
+      <td>USInt</td>
+    </tr>
+    <tr>
+      <td>retain</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>publishMsgLen</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>willMsgLen</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>connParam</td>
+      <td>"LMQTT_typeConnParam"</td>
+    </tr>
+    <tr>
+      <td>clientID</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>username</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>willtopic</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>willMsgPayload</td>
+      <td>Array[0..99] of Byte</td>
+    </tr>
+    <tr>
+      <td>mqttTopic</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>publishMsgPayload</td>
+      <td>Array[0..99] of Byte</td>
+    </tr>
+    <tr>
+      <td>receivedTopic</td>
+      <td>WString</td>
+    </tr>
+    <tr>
+      <td>receivedMsgPayload</td>
+      <td>Array[0..99] of Byte</td>
+    </tr>
+    <tr>
+      <td>valid</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>done</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>busy</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>error</td>
+      <td>Bool</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>Word</td>
+    </tr>
+    <tr>
+      <td>diagnostics</td>
+      <td>"typeDiagnostics"</td>
+    </tr>
+    <tr>
+      <td>receivedMsgStatus</td>
+      <td>USInt</td>
+    </tr>
+    <tr>
+      <td>receivedMsgDataLen</td>
+      <td>UDint</td>
+    </tr>
+  </table>
+</div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/10.png" alt="Siemens MQTT Image 0">
@@ -150,9 +233,10 @@ mqttTopic=test ( feel free to use other topic)
 ---
 
 ## Part 5: Link the Variables to the FB
-1. Return to the network where the `LMQTT_Client` FB is located.
-2. Connect each FB parameter to the corresponding variable in the `Block_IoT_MQTT`.
-3. Ensure proper assignment:
+
+1.  Return to the network where the `LMQTT_Client` FB is located.
+2.  Connect each FB parameter to the corresponding variable in the `Block_IoT_MQTT`.
+3.  Ensure proper assignment:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/MQTT/SIEMENS/IMAGES/12.png" alt="Siemens MQTT Image 0">
@@ -163,7 +247,8 @@ mqttTopic=test ( feel free to use other topic)
 
 #### **Recommendation**
 
-For detailed information about each parameter's behavior, refer to the official documentation provided by Siemens on the download page for the **LMQTT_Client** library.
+For detailed information about each parameter's behavior, refer to the official documentation provided by Siemens on the download page for the **LMQTT\_Client** library.
+
 ---
 
 ## Part 6: Create a Watch and Force tables
@@ -211,8 +296,16 @@ Check the receivedMsgPayload in the Watch table. The value should change from 16
 
 * **`<p align="center">` y `</p>`**: Estas son etiquetas HTML de párrafo. El atributo `align="center"` le dice al navegador que centre todo el contenido dentro de esas etiquetas.
 * **`<img src="URL_RAW_DE_LA_IMAGEN" alt="Texto alternativo">`**: Esta es la forma HTML de incrustar una imagen.
+
     * `src`: Aquí colocas la URL directa o "raw" de la imagen en GitHub.
     * `alt`: Este es el texto alternativo que se muestra si la imagen no carga, y es importante para la accesibilidad.
 * **Elementos de bloque**: La etiqueta `<p>` es un elemento de "nivel de bloque" en HTML. Esto significa que automáticamente crea una nueva línea antes y después de sí misma, impidiendo que los elementos se pongan uno al lado del otro.
+* **`<div align="center">` y `</div>`**: Hemos envuelto toda la tabla dentro de una etiqueta `<div>`. El atributo `align="center"` aplicado a un `<div>` (que es un elemento de bloque) centrará su contenido horizontalmente en la página.
+* **`<table>`, `<tr>`, `<th>`, `<td>`**: Estas son las etiquetas HTML estándar para crear tablas:
 
-Al usar esta estructura para cada imagen, te aseguras de que cada una esté centrada y en su propia línea, independientemente de cuántas imágenes coloques.
+    * `<table>`: Define la tabla.
+    * `<tr>`: Define una fila de la tabla (table row).
+    * `<th>`: Define una celda de encabezado (table header).
+    * `<td>`: Define una celda de datos (table data).
+
+Al usar esta estructura para cada imagen y para la tabla, te aseguras de que cada una esté centrada y en su propia línea, independientemente de cuántas imágenes coloques.
