@@ -36,7 +36,7 @@ You will be directed to the login page of the groov EPIC interface.
 ### Step 3: Log In to the groov EPIC Interface
 Use the following credentials to log in:
 
-<div align="center">
+<div>
   <table>
     <tr>
       <th>Username</th>
