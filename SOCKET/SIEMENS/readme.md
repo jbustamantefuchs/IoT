@@ -83,8 +83,8 @@ Step-by-step guide to implementing **SOCKET** communication on **Siemens** devic
 ### d) Include the Function Block inside the Main Organization Block (OB1), and link the variables from DB\_TCP\_IP to the Function Block accordingly.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.png" alt="Siemens Socket Image 0">
-  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.1.png" alt="Siemens Socket Image 0">
+  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.png" alt="Siemens Socket Image E" style="display: block;">
+  <img src="https://raw.githubusercontent.com/jbustamantefuchs/IoT/main/SOCKET/SIEMENS/IMAGES/6.1.png" alt="Siemens Socket Image F" style="display: block;">
 </div>
 
 ### e) Return to DB\_TCP\_IP and update the connection variable using your own IP address and port number.
