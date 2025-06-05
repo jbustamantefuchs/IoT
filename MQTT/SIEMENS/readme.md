@@ -291,21 +291,3 @@ Check the receivedMsgPayload in the Watch table. The value should change from 16
 </p>
 
 ---
-
-### **¿Cómo funciona esto?**
-
-* **`<p align="center">` y `</p>`**: Estas son etiquetas HTML de párrafo. El atributo `align="center"` le dice al navegador que centre todo el contenido dentro de esas etiquetas.
-* **`<img src="URL_RAW_DE_LA_IMAGEN" alt="Texto alternativo">`**: Esta es la forma HTML de incrustar una imagen.
-
-    * `src`: Aquí colocas la URL directa o "raw" de la imagen en GitHub.
-    * `alt`: Este es el texto alternativo que se muestra si la imagen no carga, y es importante para la accesibilidad.
-* **Elementos de bloque**: La etiqueta `<p>` es un elemento de "nivel de bloque" en HTML. Esto significa que automáticamente crea una nueva línea antes y después de sí misma, impidiendo que los elementos se pongan uno al lado del otro.
-* **`<div align="center">` y `</div>`**: Hemos envuelto toda la tabla dentro de una etiqueta `<div>`. El atributo `align="center"` aplicado a un `<div>` (que es un elemento de bloque) centrará su contenido horizontalmente en la página.
-* **`<table>`, `<tr>`, `<th>`, `<td>`**: Estas son las etiquetas HTML estándar para crear tablas:
-
-    * `<table>`: Define la tabla.
-    * `<tr>`: Define una fila de la tabla (table row).
-    * `<th>`: Define una celda de encabezado (table header).
-    * `<td>`: Define una celda de datos (table data).
-
-Al usar esta estructura para cada imagen y para la tabla, te aseguras de que cada una esté centrada y en su propia línea, independientemente de cuántas imágenes coloques.
